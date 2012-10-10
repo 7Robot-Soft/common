@@ -13,3 +13,6 @@
 [submodule "simu"]
 	path = simu
 	url = git@github.com:7Robot-Soft/simu.git
+[submodule "logrender"]
+	path = logrender
+	url = git@github.com:7Robot-Soft/logrender.git
