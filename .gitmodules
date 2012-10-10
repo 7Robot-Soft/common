@@ -16,3 +16,6 @@
 [submodule "logrender"]
 	path = logrender
 	url = git@github.com:7Robot-Soft/logrender.git
+[submodule "usbdaemon"]
+	path = usbdaemon
+	url = git@github.com:7Robot-Soft/usbdaemon.git
