@@ -1,6 +1,6 @@
 # Maintainer: Élie Bouttier <elie.bouttier@free.fr>
 pkgname=7robot-soft-git
-pkgver=20121002
+pkgver=20121011
 pkgrel=1
 pkgdesc="7Robot - Eurobot software related sources"
 arch=('i686' 'x86_64')
@@ -10,18 +10,27 @@ depends=()
 makedepends=('git' 'cmake')
 
 _gitroot=../..
-_gitname=eurobot
 
 build() {
+  rm -rf "$srcdir/*"
+
+  msg "Cloning common repository..."
+  git clone "$_gitroot" "$srcdir"
   cd "$srcdir"
 
-  rm -rf "$srcdir/$_gitname"
-  git clone "$_gitroot" "$_gitname"
-  cd "$_gitname"
+  msg "Adjusting submodules urls to local repositories..."
+  sed -i "s/git@github\.com:7Robot-Soft\/\([a-zA-Z0-9-]*\).git/\.\.\/\.\.\/\.\.\/\.\.\/\1/g" .gitmodules
+  git submodule init
 
+  msg "Cloning submodules..."
+  git submodule update
+
+  msg "Genering makefile..."
   mkdir build
   cd build
   cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+
+  msg "Compiling..."
   make
 }
 
