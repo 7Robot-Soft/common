@@ -10,3 +10,6 @@
 [submodule "logviewer"]
 	path = logviewer
 	url = git@github.com:7Robot-Soft/logviewer.git
+[submodule "simu"]
+	path = simu
+	url = git@github.com:7Robot-Soft/simu.git
