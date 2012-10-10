@@ -7,3 +7,6 @@
 [submodule "tcphub"]
 	path = tcphub
 	url = git@github.com:7Robot-Soft/tcphub.git
+[submodule "logviewer"]
+	path = logviewer
+	url = git@github.com:7Robot-Soft/logviewer.git
