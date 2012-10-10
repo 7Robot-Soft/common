@@ -1,3 +1,6 @@
 [submodule "atp"]
 	path = atp
 	url = git@github.com:7Robot-Soft/atp.git
+[submodule "ia"]
+	path = ia
+	url = git@github.com:7Robot-Soft/ia.git
