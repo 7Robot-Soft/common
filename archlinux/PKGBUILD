@@ -1,0 +1,31 @@
+# Maintainer: Élie Bouttier <elie.bouttier@free.fr>
+pkgname=7robot-soft-git
+pkgver=20121002
+pkgrel=1
+pkgdesc="7Robot - Eurobot software related sources"
+arch=('i686' 'x86_64')
+url="http://7robot.fr"
+license=('GPL')
+depends=()
+makedepends=('git' 'cmake')
+
+_gitroot=../..
+_gitname=eurobot
+
+build() {
+  cd "$srcdir"
+
+  rm -rf "$srcdir/$_gitname"
+  git clone "$_gitroot" "$_gitname"
+  cd "$_gitname"
+
+  mkdir build
+  cd build
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+  make
+}
+
+package() {
+  cd "$srcdir/$_gitname/build"
+  make DESTDIR="$pkgdir/" install
+}
