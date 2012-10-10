@@ -1,0 +1,3 @@
+[submodule "atp"]
+	path = atp
+	url = git@github.com:7Robot-Soft/atp.git
