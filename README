@@ -1,0 +1,15 @@
+After a sucessful git clone :
+
+git submodule init
+git submodule update
+
+Now you have a local copy of submodule repositories.
+
+To build the project :
+
+mkdir build
+cd build
+cmake ..
+make
+
+The main CMakeLists.txt use submodules CMakeLists.txt in order to compile all submodule project.
