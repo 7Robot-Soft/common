@@ -20,8 +20,8 @@
 	path = usbdaemon
     url = git@github.com:7Robot-Soft/usbdaemon.git
 [submodule "arduino"]
-    path = arduino
-    url = git@github.com:7Robot-Soft/arduino.git
+	path = arduino
+	url = ./arduino
 [submodule "protos"]
-    path = protos
-    url = git@github.com:7Robot-Soft/protos.git
+	path = protos
+	url = ./protos
