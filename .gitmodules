@@ -22,6 +22,3 @@
 [submodule "arduino"]
 	path = arduino
     url = git@github.com:7Robot-Soft/arduino.git
-[submodule "protos"]
-	path = protos
-    url = git@github.com:7Robot-Soft/protos.git
