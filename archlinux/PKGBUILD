@@ -24,6 +24,7 @@ build() {
 
   msg "Cloning submodules..."
   git submodule update
+  git submodule foreach git checkout master
 
   msg "Genering makefile..."
   mkdir build
