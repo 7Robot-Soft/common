@@ -2,8 +2,12 @@ After a sucessful git clone :
 
 git submodule init
 git submodule update
+git submodule foreach git checkout master
 
 Now you have a local copy of submodule repositories.
+If you want to update all submodule repositories to lastest version, run this command:
+
+git submodule foreach git pull
 
 To build the project :
 
@@ -11,5 +15,6 @@ mkdir build
 cd build
 cmake ..
 make
+sudo make install
 
 The main CMakeLists.txt use submodules CMakeLists.txt in order to compile all submodule project.
