@@ -25,3 +25,6 @@
 [submodule "pic"]
 	path = pic
     url = git@github.com:7Robot-Soft/pic.git
+[submodule "visu"]
+	path = visu
+	url = git@github.com:7Robot-Soft/visu.git
