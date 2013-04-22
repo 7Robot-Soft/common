@@ -28,3 +28,6 @@
 [submodule "visu"]
 	path = visu
 	url = git@github.com:7Robot-Soft/visu.git
+[submodule "jsbot"]
+	path = jsbot
+	url = git@github.com:7Robot-Soft/jsbot.git
